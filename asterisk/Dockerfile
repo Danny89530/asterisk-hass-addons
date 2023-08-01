@@ -38,6 +38,8 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
         libncurses5 ncurses-bin ncurses-term \
         # for res_resolver_unbound \
         libunbound8 \
+        # TFTPD server \
+        libwrap0 tftpd-hpa \
         procps \
         python3-pip \
         rsync \

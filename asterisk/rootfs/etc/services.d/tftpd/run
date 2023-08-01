@@ -1,0 +1,25 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Start the tftpd service
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+# shellcheck shell=bash
+
+if [[ -f "/tmp/disable-tftpd" ]]; then
+    # Tell S6-Overlay not to restart this service
+    s6-svc -O .
+    exit 0
+fi
+
+bashio::log.info "Starting TFTPD Daemon..."
+
+if [[ "${__BASHIO_LOG_LEVEL}" -ge 6 ]]; then
+    extra_args=(--verbose)
+else
+    extra_args=()
+fi
+
+bashio::log.warning "${extra_args[@]}"
+
+exec /usr/sbin/in.tftpd --foreground --user root --address ":69" --secure --create "${extra_args[@]}" /config/asterisk/tftp_root

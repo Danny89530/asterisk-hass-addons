@@ -47,6 +47,9 @@ configuration:
   mailbox_google_api_key:
     name: Chiave API Google
     description: La chiave API per il riconoscimento vocale.
+  tftpd_server:
+    name: Server TFTP
+    description: Installa il server TFTP (Trivial File Transfer Protocol).
   log_level:
     name: Livello Log
     description: Il livello di registrazione per configurare Asterisk.

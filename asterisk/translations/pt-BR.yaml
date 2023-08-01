@@ -59,6 +59,10 @@ configuration:
     name: Chave de API do Google
     description: >-
       A chave de API para conversão de fala em texto.
+  tftpd_server:
+    name: Servidor TFTP
+    description: >-
+      Instale o servidor TFTP (Trivial File Transfer Protocol).
   log_level:
     name: Nível de registro
     description: >-

@@ -185,6 +185,12 @@ else
     touch /tmp/disable-asterisk-mailbox
 fi
 
+if bashio::var.true "$(bashio::config 'tftpd_server')"; then
+    mkdir -p "${config_dir}/tftp_root"
+else
+    touch /tmp/disable-tftpd
+fi
+
 # Save default configs
 bashio::log.info "Saving default configs to ${default_config_dir}..."
 if ! rsync --archive --delete "${etc_asterisk}/" "${default_config_dir}/"; then

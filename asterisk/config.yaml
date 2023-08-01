@@ -29,6 +29,7 @@ options:
   mailbox_password: ""
   mailbox_extension: "100"
   mailbox_google_api_key: ""
+  tftpd_server: false
   log_level: info
 schema:
   ami_password: password
@@ -45,6 +46,7 @@ schema:
   mailbox_password: password
   mailbox_extension: str
   mailbox_google_api_key: password
+  tftpd_server: bool
   log_level: list(all|trace|debug|info|notice|warning|error|fatal|off)
 host_network: true
 init: false

@@ -59,6 +59,10 @@ configuration:
     name: Google API Key
     description: >-
       The API Key for speech-to-text.
+  tftpd_server:
+    name: Server TFTP
+    description: >-
+      Install the TFTP (Trivial File Transfer Protocol) server.
   log_level:
     name: Log Level
     description: >-
