@@ -1,0 +1,52 @@
+configuration:
+  ami_password:
+    name: Password AMI
+    description: >-
+      La password che verrà utilizzata per l'utente 'admin' in AMI.
+  video_support:
+    name: Supporto Video
+    description: >-
+      Abilita il supporto video per le estensioni aggiunte automaticamente. Il supporto video non funziona per l'app companion.
+  auto_add_secret:
+    name: Aggiunta Automatica Segreta
+    description: >-
+      La chiave segreta impostata per ogni estensione aggiunta automaticamente. Cambiare questa impostazione con una password sicura.
+  auto_add:
+    name: Aggiunta Automatica Estensioni
+    description: >-
+      Consente di abilitare la creazione automatica di estensioni per ogni persona registrata in Home Assistant. Avranno il loro numero/nome utente generato automaticamente a partire dal numero 100.
+  additional_sounds:
+    name: Lingue Ulteriori Suoni da Scaricare
+    description: >-
+      Le lingue per i suoni aggiuntivi da scaricare da https://asterisksounds.org all'avvio del componente aggiuntivo, evitando il download se già scaricate. Esempio: it.
+  generate_ssl_cert:
+    name: Genera Certificato SSL
+    description: >-
+      Abilita/disabilita la generazione di un certificato autofirmato per l'uso con le interfacce SSL (WSS e TLS).
+  certfile:
+    name: File Certificato
+    description: >-
+      Il file del certificato da utilizzare per SSL nella cartella '/ssl/', quando 'Genera Certificato SSL' è disabilitato.
+  keyfile:
+    name: File Chiave Privata
+    description: >-
+      Il file della chiave da utilizzare per SSL nella cartella '/ssl/', quando 'Genera Certificato SSL' è disabilitato.
+  mailbox:
+    name: Server Casella di Posta
+    description: >-
+      Abilita il server casella di posta per inviare messaggi vocali all'integrazione della casella di posta di Asterisk.
+  mailbox_port:
+    name: Porta Server Casella di Posta
+    description: La porta utilizzata dal server casella di posta.
+  mailbox_password:
+    name: Password Server Casella di Posta
+    description: La password per il server casella di posta.
+  mailbox_extension:
+    name: Estensione Server Casella di Posta
+    description: Quale estensione utilizzare per ottenere i messaggi vocali.
+  mailbox_google_api_key:
+    name: Chiave API Google
+    description: La chiave API per il riconoscimento vocale.
+  log_level:
+    name: Livello Log
+    description: Il livello di registrazione per configurare Asterisk.
